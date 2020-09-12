@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    width:100%;
+    height:100%;
+    cursor:pointer;
+}
+
+body{
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    position:relative;
+
+}
+
+canvas{
+    width:100%;
+    height:100%;
+}
+
+.orange-wrap{
+    position:absolute;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+
+}
+
+.orange-wrap img{
+    width:17%;
+}
