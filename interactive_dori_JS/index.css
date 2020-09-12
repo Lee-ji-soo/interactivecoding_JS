@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+*{margin:0;
+padding:0;
+outline:0;
+}
+
+html{
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    font-family: 'Changa One', cursive;
+          font-size:100%;
+}
+
+body{
+    width:100%;
+    height:100%;
+}
+
+canvas{
+    width:100%;
+    height:100%;
+}
+
+#root{
+    width:100%;
+    height:100%;
+}
+
+.dori{
+    position:absolute;
+    z-index:5;
+    width:50%;
+    height:70%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.doriImg{
+    width:30%;
+}
+
+.fontWrap{
+    width:100%;
+    position:relative;
+    font-size:3rem;
+    color:#fff;
+}
+
+.font{
+    position:absolute;
+    transition:all .2s ease;
+}
+
+.font:hover{
+   color:transparent;
+   text-shadow:0 0 .1em #fff, 0 0 .3em #fff;
+}
