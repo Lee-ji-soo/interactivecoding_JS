@@ -23,7 +23,6 @@ class Urchin {
         this.radi = Math.atan2(mouseY - (this.domY - this.width / 2), mouseX - (this.domX - this.width / 2));
         this.deg = this.radi * 180 / Math.PI;
         this.$urchin.style.transform = `rotate(${this.deg}deg)`
-        console.log(this.$urchin)
     }
 
     onMove(e) {

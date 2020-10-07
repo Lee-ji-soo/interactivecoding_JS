@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    outline:0;
+    padding:0;
+}
+
+html{
+    width:100%;
+    height:100%;
+}
+
+body{
+    width:100%;
+    height:100%;
+}
+
+#root{
+    font-size: 100%;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+}
+
+main{
+    width:100%;
+    height:100%;
+}
+
+.muchaBOX{
+    position:relative;
+    width:50%;
+    height:90%;
+}
+
+.mucha, .muchaWoman{
+    width:100%;
+    position:absolute;
+    top:0%;
+    left:0%;
+}
+
+.muchaCircle{
+    position:absolute;
+    width:80%;
+    top:9%;
+    left:10%;
+}
+
