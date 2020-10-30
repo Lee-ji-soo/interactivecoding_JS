@@ -1,6 +1,7 @@
 class Mucha {
-    constructor({ $target }) {
+    constructor({ $target, i }) {
         this.$target = $target;
+        this.index = i + 1;
         this.$div = document.createElement('div');
         this.$target.appendChild(this.$div);
         this.$div.className = 'muchaBOX';
@@ -23,9 +24,9 @@ class Mucha {
     }
 
     render() {
-        this.$mucha.setAttribute('src', './assets/mucha_bg.jpg')
-        this.$muchaCircle.setAttribute('src', './assets/mucha_cir.png')
-        this.$muchaWoman.setAttribute('src', './assets/mucha_wo.png')
+        this.$mucha.setAttribute('src', `./assets/mucha${this.index}.jpg`)
+        this.$muchaCircle.setAttribute('src', `./assets/mucha${this.index}_cir.png`)
+        this.$muchaWoman.setAttribute('src', `./assets/mucha${this.index}_wo.png`)
     }
 
     rotate(mouseX, mouseY) {

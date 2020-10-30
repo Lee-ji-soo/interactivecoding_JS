@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 *{
     margin:0;
     outline:0;
@@ -12,24 +14,27 @@ html{
 body{
     width:100%;
     height:100%;
+    background-color:#e0ddccb0;
 }
 
 #root{
     font-size: 100%;
     width:100%;
     height:100%;
-    background-color:#fff;
+    overflow-x: hidden;
 }
 
 main{
     width:100%;
     height:100%;
+    margin-top:10%;
 }
 
 .muchaBOX{
+    margin-top:10%;
     position:relative;
-    width:50%;
-    height:90%;
+    width:100%;
+    height:76%;
 }
 
 .mucha, .muchaWoman{
@@ -41,8 +46,20 @@ main{
 
 .muchaCircle{
     position:absolute;
-    width:80%;
-    top:9%;
-    left:10%;
+    width:81%;
+    top:7.2%;
+    left:9.2%;
 }
+
+.h1{
+    position: absolute;
+    top:1rem;
+    left:3rem;
+    right:0;
+    margin:0 auto;
+    color:rgb(255, 253, 253);
+    font-size:12em;
+    font-family: 'Dancing Script', cursive;
+}
+
 
