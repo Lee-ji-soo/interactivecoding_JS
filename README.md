@@ -6,7 +6,12 @@ creative coding with JS
 JS
 
 ## Sample
+1.Random Ball 
+- find mouse position
+- set random color
+- set random size 
 <img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/dot1.gif"/>
+
 <img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/pyokpyok3.gif"/>
 <img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/dorifont.gif"/>
 <img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/ball.gif"/>
