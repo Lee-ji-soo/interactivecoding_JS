@@ -47,8 +47,10 @@ JS
 1.Sea Urchin 
 - Render same element with component 컴포넌트로 랜딩
 - Mousemove Event 마우스위치에 따른 요소 Rotate
+<div display='flex'>
 <img width="200" height="200" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/urchin2edit.gif"/>
 <img width="200" height="200" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/urchin3edit.gif"/>
+</div>
 
 <br>
 
