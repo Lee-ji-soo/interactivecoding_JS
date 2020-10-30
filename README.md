@@ -6,4 +6,4 @@ creative coding with JS
 JS
 
 ## Sample
-![alt text](https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/gif/dot1.gif?raw=true)
+![alt text](https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/dot1.gif?raw=true)
