@@ -58,6 +58,11 @@ JS
 - Mousemove Event 마우스 위치에 따른 요소 Rotate
 <img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/mucha1edit.gif"/>
 
+<br>
+3.Cat EYE
+- Mousemove Event 마우스 위치에 따른 요소 반전
+<img text-align='center' width="400" height="auto" src="https://raw.githubusercontent.com/Lee-ji-soo/interactivecoding_JS/master/gif/cat.gif"/>
+
 ### Keyup Evt
 1.Deep sea
 - Render same element with component 컴포넌트로 가오리 랜딩
