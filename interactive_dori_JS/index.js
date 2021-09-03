@@ -4,4 +4,3 @@ new App({
     $target: document.querySelector("#root")
 })
 
-
