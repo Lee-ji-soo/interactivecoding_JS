@@ -1,0 +1,48 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+body #root {
+  width: 100%;
+  height: 100%;
+}
+
+#root .scroll {
+  background-color: #111;
+}
+#root div.circle {
+  display: none;
+  border-radius: 50%;
+}
+
+#root div.show {
+  display: block;
+}
+
+#root div.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#root .circle1 {
+  background-color: #2b84fd;
+}
+
+#root .circle2 {
+  z-index: 10;
+  background-color: yellowgreen;
+}
+
+#root .circle3 {
+  z-index: 20;
+  background-color: pink;
+}
+
+#root .circle4 {
+  z-index: 30;
+  background-color: gold;
+}
