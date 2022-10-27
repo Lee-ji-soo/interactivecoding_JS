@@ -46,13 +46,16 @@ function App({ $container, $play, $canvas, $audio }) {
       const green = i * 4;
       const blue = barHeight / 4 - 12;
       //왼쪽
-      ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
-      ctx.fillRect(WIDTH / 2 - x, HEIGHT - barHeight, barWidth, barHeight);
-
+      // ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
+      // ctx.fillRect(WIDTH / 2 - x, HEIGHT - barHeight, barWidth, barHeight);
+      if (barHeight >= 0 && barHeight >= 100) {
+        ctx.fillStyle = "red";
+        ctx.fillRect(WIDTH / 2 - x, HEIGHT - barHeight, barWidth, 10);
+      }
       //오른쪽
-      ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
-      ctx.fillRect(WIDTH / 2 + x, HEIGHT - barHeight, barWidth, barHeight); // this will continue moving from left to right
-      x += barWidth; // increases the x value by the width of the bar
+      // ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
+      // ctx.fillRect(WIDTH / 2 + x, HEIGHT - barHeight, barWidth, barHeight); // this will continue moving from left to right
+      // x += barWidth; // increases the x value by the width of the bar
     }
   };
 
