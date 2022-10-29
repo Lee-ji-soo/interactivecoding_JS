@@ -27,14 +27,41 @@ function App({ $container, $play, $canvas, $audio }) {
   let x = 0;
   let myReq;
   const renderFrame = () => {
-    x = 0;
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
     analyser.getByteFrequencyData(dataArray);
+    console.log({ dataArray });
     drawVisualizer({
       bufferLength,
       dataArray,
       barWidth,
     });
+    // ctx.fillStyle = "rgb(200, 200, 200)";
+    // ctx.fillRect(0, 0, WIDTH, HEIGHT);
+
+    // ctx.lineWidth = 2;
+    // ctx.strokeStyle = "rgb(0, 0, 0)";
+
+    // ctx.beginPath();
+
+    // const sliceWidth = (WIDTH * 1.0) / bufferLength;
+    // let x = 0;
+
+    // for (let i = 0; i < bufferLength; i++) {
+    //   const v = dataArray[i] / 128.0;
+    //   const y = (v * HEIGHT) / 2;
+
+    //   if (i === 0) {
+    //     ctx.moveTo(x, y);
+    //   } else {
+    //     ctx.lineTo(x, y);
+    //   }
+
+    //   x += sliceWidth;
+    // }
+
+    // ctx.lineTo(canvas.width, canvas.height / 2);
+    // ctx.stroke();
+
     myReq = requestAnimationFrame(renderFrame);
   };
 
@@ -42,17 +69,15 @@ function App({ $container, $play, $canvas, $audio }) {
     let barHeight;
     for (let i = 0; i < bufferLength; i++) {
       barHeight = dataArray[i];
-      const red = (i * barHeight) / 10;
-      const green = i * 4;
-      const blue = barHeight / 4 - 12;
-      //왼쪽
-      // ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
-      // ctx.fillRect(WIDTH / 2 - x, HEIGHT - barHeight, barWidth, barHeight);
-      if (barHeight >= 0 && barHeight >= 100) {
+      // const red = (i * barHeight) / 10;
+      // const green = i * 4;
+      // const blue = barHeight / 4 - 12;
+      const color = (i * barHeight) / 10;
+      if (barHeight === i + 200) {
         ctx.fillStyle = "red";
-        ctx.fillRect(WIDTH / 2 - x, HEIGHT - barHeight, barWidth, 10);
+        ctx.fillRect(i * 10, i * barHeight, barWidth, 20);
       }
-      //오른쪽
+      // 오른쪽
       // ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
       // ctx.fillRect(WIDTH / 2 + x, HEIGHT - barHeight, barWidth, barHeight); // this will continue moving from left to right
       // x += barWidth; // increases the x value by the width of the bar
