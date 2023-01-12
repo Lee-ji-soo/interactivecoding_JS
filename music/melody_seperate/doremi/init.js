@@ -11,19 +11,13 @@ Basic Pitch Detection
 let audioContext;
 let pitch;
 
-const CANVAS_WIDTH = 560;
+const CANVAS_WIDTH = 1200;
 const CANVAS_HEIGHT = 560;
-const x = CANVAS_WIDTH / 2;
-const y = CANVAS_HEIGHT / 2;
 audioContext = new AudioContext();
 const $audioElement = document.querySelector("#audio");
 const $playButton = document.querySelector("#play-button");
 const $canvas = document.querySelector("#canvas");
-
-console.log($canvas);
-$canvas.width = CANVAS_WIDTH;
-$canvas.height = CANVAS_HEIGHT;
-const ctx = canvas.getContext("2d");
+const $canvasInner = $canvas.querySelector("#canvas-inner");
 
 async function setup() {
   const stream = $audioElement.captureStream();
@@ -39,28 +33,35 @@ function modelLoaded() {
   getPitch();
 }
 
-function draw({ ctx, frequency }) {
-  // ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  const color = frequency;
-  console.log(frequency, color);
-  ctx.beginPath();
-  ctx.arc(x, y, color, 0, color, false);
-  ctx.lineWidth = 1;
-  ctx.fillStyle = `rgb(255, 221, ${color})`;
-  ctx.fill();
-  // time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds();
+$canvas.style.width = "100px";
+$canvas.style.height = "100px";
+$canvas.style.overflow = "hidden";
+$canvasInner.style.width = "500px";
+$canvasInner.style.height = "100%";
+$canvasInner.style.background =
+  "linear-gradient(90deg, #948E99 0%, #2E1437 100%)";
+function draw({ frequency }) {
+  $canvas.style.width = `${frequency}px`;
+  $canvas.style.transition = "all 0.3s cubic-bezier(.29, 1.01, 1, -0.68)";
 }
 
+let temp = 0;
 function getPitch() {
+  if ($playButton.dataset.playing === "false") {
+    return;
+  }
   pitch.getPitch(function (err, frequency) {
     if (frequency) {
+      temp = frequency;
       draw({
-        ctx,
         frequency,
       });
       document.querySelector("#result").textContent = frequency;
     } else {
-      document.querySelector("#result").textContent = "No pitch detected";
+      draw({
+        frequency: temp,
+      });
+      document.querySelector("#result").textContent = temp;
     }
     getPitch();
   });
